@@ -13,7 +13,6 @@ import discordPlayer from "discord-player";
 const { Player, RepeatMode } = discordPlayer;
 import { DefaultExtractors } from "@discord-player/extractor";
 import playdl from "play-dl";
-import "./keepalive.js";
 
 const client = new Client({
   intents: [
