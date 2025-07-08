@@ -27,7 +27,15 @@ process.on("uncaughtExceptionMonitor", (err, origin) => {
   console.error("🔍 Exception Monitored:", err, "at", origin);
 });
 // 🛡️ 錯誤處理結束 ⬆️
+// 如果你用 express
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
 
+// 健康檢查
+app.get('/healthz', (req, res) => {
+  res.status(200).send('OK');
+});
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
@@ -314,5 +322,6 @@ client.on(Events.InteractionCreate, async (interaction) => {
     }
   }
 });
+require('./render-keepalive');
 
 client.login(process.env.TOKEN);
