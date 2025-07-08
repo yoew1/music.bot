@@ -1,18 +1,14 @@
 {
-  "name": "discord-music-bot",
+  "name": "render-keepalive",
   "version": "1.0.0",
+  "main": "render-keepalive.js",
   "type": "module",
-  "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node render-keepalive.js"
   },
   "dependencies": {
-    "@discord-player/extractor": "^7.1.0",
-    "@discordjs/rest": "^2.5.1",
-    "discord-player": "^7.1.0",
-    "discord.js": "^14.14.1",
-    "dotenv": "^16.3.1",
-    "express": "^5.1.0",
-    "play-dl": "^1.9.0"
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.2"
   }
 }
+
